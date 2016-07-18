@@ -1,0 +1,514 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6F9E4E14A63FD9ED519AD15E /* libPods-CardPackage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BB82229D809EC3B763A08E /* libPods-CardPackage.a */; };
+		A94E7B851D38CE2E001CB861 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A94E7B841D38CE2E001CB861 /* main.m */; };
+		A94E7B881D38CE2E001CB861 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A94E7B871D38CE2E001CB861 /* AppDelegate.m */; };
+		A94E7B8B1D38CE2E001CB861 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A94E7B8A1D38CE2E001CB861 /* ViewController.m */; };
+		A94E7B8E1D38CE2E001CB861 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A94E7B8C1D38CE2E001CB861 /* Main.storyboard */; };
+		A94E7B911D38CE2E001CB861 /* CardPackage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A94E7B8F1D38CE2E001CB861 /* CardPackage.xcdatamodeld */; };
+		A94E7B931D38CE2E001CB861 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A94E7B921D38CE2E001CB861 /* Assets.xcassets */; };
+		A94E7B961D38CE2E001CB861 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A94E7B941D38CE2E001CB861 /* LaunchScreen.storyboard */; };
+		A94E7BAE1D38D9B6001CB861 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = A94E7BAD1D38D9B6001CB861 /* UIColor+Hex.m */; };
+		A94E7BB41D38E010001CB861 /* CardPackageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A94E7BB31D38E010001CB861 /* CardPackageCell.m */; };
+		A94E7BB71D38E7E8001CB861 /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = A94E7BB61D38E7E8001CB861 /* Tools.m */; };
+		A94E7BBC1D3A8457001CB861 /* Card+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = A94E7BB91D3A8457001CB861 /* Card+CoreDataProperties.m */; };
+		A94E7BBD1D3A8457001CB861 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = A94E7BBB1D3A8457001CB861 /* Card.m */; };
+		A94E7BC21D3A873A001CB861 /* AddCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A94E7BC11D3A873A001CB861 /* AddCardViewController.m */; };
+		A94E7BC51D3A90A0001CB861 /* AddCardScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A94E7BC41D3A90A0001CB861 /* AddCardScanViewController.m */; };
+		A94E7BC91D3A964D001CB861 /* AddCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = A94E7BC81D3A964D001CB861 /* AddCardView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9659EC46720DD97CACD7520D /* Pods-CardPackage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardPackage.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardPackage/Pods-CardPackage.release.xcconfig"; sourceTree = "<group>"; };
+		A94E7B801D38CE2E001CB861 /* CardPackage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardPackage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A94E7B841D38CE2E001CB861 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A94E7B861D38CE2E001CB861 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A94E7B871D38CE2E001CB861 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A94E7B891D38CE2E001CB861 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A94E7B8A1D38CE2E001CB861 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A94E7B8D1D38CE2E001CB861 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A94E7B901D38CE2E001CB861 /* CardPackage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CardPackage.xcdatamodel; sourceTree = "<group>"; };
+		A94E7B921D38CE2E001CB861 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A94E7B951D38CE2E001CB861 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A94E7B971D38CE2E001CB861 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A94E7BAC1D38D9B6001CB861 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		A94E7BAD1D38D9B6001CB861 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		A94E7BAF1D38DC25001CB861 /* MainMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainMacro.h; sourceTree = "<group>"; };
+		A94E7BB01D38DC63001CB861 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		A94E7BB21D38E010001CB861 /* CardPackageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardPackageCell.h; sourceTree = "<group>"; };
+		A94E7BB31D38E010001CB861 /* CardPackageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardPackageCell.m; sourceTree = "<group>"; };
+		A94E7BB51D38E7E8001CB861 /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
+		A94E7BB61D38E7E8001CB861 /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
+		A94E7BB81D3A8457001CB861 /* Card+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Card+CoreDataProperties.h"; sourceTree = "<group>"; };
+		A94E7BB91D3A8457001CB861 /* Card+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Card+CoreDataProperties.m"; sourceTree = "<group>"; };
+		A94E7BBA1D3A8457001CB861 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		A94E7BBB1D3A8457001CB861 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		A94E7BC01D3A873A001CB861 /* AddCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCardViewController.h; sourceTree = "<group>"; };
+		A94E7BC11D3A873A001CB861 /* AddCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCardViewController.m; sourceTree = "<group>"; };
+		A94E7BC31D3A90A0001CB861 /* AddCardScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCardScanViewController.h; sourceTree = "<group>"; };
+		A94E7BC41D3A90A0001CB861 /* AddCardScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCardScanViewController.m; sourceTree = "<group>"; };
+		A94E7BC71D3A964D001CB861 /* AddCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCardView.h; sourceTree = "<group>"; };
+		A94E7BC81D3A964D001CB861 /* AddCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCardView.m; sourceTree = "<group>"; };
+		B1BB82229D809EC3B763A08E /* libPods-CardPackage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CardPackage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA9F9C4FFF05701F6B79FAAF /* Pods-CardPackage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardPackage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardPackage/Pods-CardPackage.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A94E7B7D1D38CE2E001CB861 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F9E4E14A63FD9ED519AD15E /* libPods-CardPackage.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		511BDEE018F814F2965E173B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1BB82229D809EC3B763A08E /* libPods-CardPackage.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A0D2991D06F667F7AE4588D9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BA9F9C4FFF05701F6B79FAAF /* Pods-CardPackage.debug.xcconfig */,
+				9659EC46720DD97CACD7520D /* Pods-CardPackage.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A94E7B771D38CE2D001CB861 = {
+			isa = PBXGroup;
+			children = (
+				A94E7BBE1D3A870A001CB861 /* AddCard */,
+				A94E7BBF1D3A870A001CB861 /* CardDetail */,
+				A94E7B821D38CE2E001CB861 /* CardPackage */,
+				A94E7B811D38CE2E001CB861 /* Products */,
+				A0D2991D06F667F7AE4588D9 /* Pods */,
+				511BDEE018F814F2965E173B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A94E7B811D38CE2E001CB861 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A94E7B801D38CE2E001CB861 /* CardPackage.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A94E7B821D38CE2E001CB861 /* CardPackage */ = {
+			isa = PBXGroup;
+			children = (
+				A94E7BB11D38DFE0001CB861 /* View */,
+				A94E7BAA1D38D96E001CB861 /* Tools */,
+				A94E7B861D38CE2E001CB861 /* AppDelegate.h */,
+				A94E7B871D38CE2E001CB861 /* AppDelegate.m */,
+				A94E7B891D38CE2E001CB861 /* ViewController.h */,
+				A94E7B8A1D38CE2E001CB861 /* ViewController.m */,
+				A94E7B8C1D38CE2E001CB861 /* Main.storyboard */,
+				A94E7B921D38CE2E001CB861 /* Assets.xcassets */,
+				A94E7B941D38CE2E001CB861 /* LaunchScreen.storyboard */,
+				A94E7B971D38CE2E001CB861 /* Info.plist */,
+				A94E7B8F1D38CE2E001CB861 /* CardPackage.xcdatamodeld */,
+				A94E7BA31D38D471001CB861 /* CoreData */,
+				A94E7B831D38CE2E001CB861 /* Supporting Files */,
+			);
+			path = CardPackage;
+			sourceTree = "<group>";
+		};
+		A94E7B831D38CE2E001CB861 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A94E7B841D38CE2E001CB861 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A94E7BA31D38D471001CB861 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				A94E7BB81D3A8457001CB861 /* Card+CoreDataProperties.h */,
+				A94E7BB91D3A8457001CB861 /* Card+CoreDataProperties.m */,
+				A94E7BBA1D3A8457001CB861 /* Card.h */,
+				A94E7BBB1D3A8457001CB861 /* Card.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		A94E7BAA1D38D96E001CB861 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				A94E7BAB1D38D96E001CB861 /* HexColor */,
+				A94E7BAF1D38DC25001CB861 /* MainMacro.h */,
+				A94E7BB01D38DC63001CB861 /* PrefixHeader.pch */,
+				A94E7BB51D38E7E8001CB861 /* Tools.h */,
+				A94E7BB61D38E7E8001CB861 /* Tools.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		A94E7BAB1D38D96E001CB861 /* HexColor */ = {
+			isa = PBXGroup;
+			children = (
+				A94E7BAC1D38D9B6001CB861 /* UIColor+Hex.h */,
+				A94E7BAD1D38D9B6001CB861 /* UIColor+Hex.m */,
+			);
+			path = HexColor;
+			sourceTree = "<group>";
+		};
+		A94E7BB11D38DFE0001CB861 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A94E7BB21D38E010001CB861 /* CardPackageCell.h */,
+				A94E7BB31D38E010001CB861 /* CardPackageCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A94E7BBE1D3A870A001CB861 /* AddCard */ = {
+			isa = PBXGroup;
+			children = (
+				A94E7BC61D3A963B001CB861 /* View */,
+				A94E7BC01D3A873A001CB861 /* AddCardViewController.h */,
+				A94E7BC11D3A873A001CB861 /* AddCardViewController.m */,
+				A94E7BC31D3A90A0001CB861 /* AddCardScanViewController.h */,
+				A94E7BC41D3A90A0001CB861 /* AddCardScanViewController.m */,
+			);
+			path = AddCard;
+			sourceTree = "<group>";
+		};
+		A94E7BBF1D3A870A001CB861 /* CardDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CardDetail;
+			sourceTree = "<group>";
+		};
+		A94E7BC61D3A963B001CB861 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A94E7BC71D3A964D001CB861 /* AddCardView.h */,
+				A94E7BC81D3A964D001CB861 /* AddCardView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A94E7B7F1D38CE2E001CB861 /* CardPackage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A94E7B9A1D38CE2E001CB861 /* Build configuration list for PBXNativeTarget "CardPackage" */;
+			buildPhases = (
+				5B0937C994758ECB6E07F1F5 /* 📦 Check Pods Manifest.lock */,
+				A94E7B7C1D38CE2E001CB861 /* Sources */,
+				A94E7B7D1D38CE2E001CB861 /* Frameworks */,
+				A94E7B7E1D38CE2E001CB861 /* Resources */,
+				2904A8F605EAAA4C77C0AB28 /* 📦 Embed Pods Frameworks */,
+				628384230F30849C9C412053 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CardPackage;
+			productName = CardPackage;
+			productReference = A94E7B801D38CE2E001CB861 /* CardPackage.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A94E7B781D38CE2D001CB861 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = lv;
+				TargetAttributes = {
+					A94E7B7F1D38CE2E001CB861 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = A94E7B7B1D38CE2D001CB861 /* Build configuration list for PBXProject "CardPackage" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A94E7B771D38CE2D001CB861;
+			productRefGroup = A94E7B811D38CE2E001CB861 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A94E7B7F1D38CE2E001CB861 /* CardPackage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A94E7B7E1D38CE2E001CB861 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A94E7B961D38CE2E001CB861 /* LaunchScreen.storyboard in Resources */,
+				A94E7B931D38CE2E001CB861 /* Assets.xcassets in Resources */,
+				A94E7B8E1D38CE2E001CB861 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2904A8F605EAAA4C77C0AB28 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CardPackage/Pods-CardPackage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B0937C994758ECB6E07F1F5 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		628384230F30849C9C412053 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CardPackage/Pods-CardPackage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A94E7B7C1D38CE2E001CB861 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A94E7BB71D38E7E8001CB861 /* Tools.m in Sources */,
+				A94E7BBC1D3A8457001CB861 /* Card+CoreDataProperties.m in Sources */,
+				A94E7B8B1D38CE2E001CB861 /* ViewController.m in Sources */,
+				A94E7BAE1D38D9B6001CB861 /* UIColor+Hex.m in Sources */,
+				A94E7BB41D38E010001CB861 /* CardPackageCell.m in Sources */,
+				A94E7BBD1D3A8457001CB861 /* Card.m in Sources */,
+				A94E7B881D38CE2E001CB861 /* AppDelegate.m in Sources */,
+				A94E7B911D38CE2E001CB861 /* CardPackage.xcdatamodeld in Sources */,
+				A94E7BC21D3A873A001CB861 /* AddCardViewController.m in Sources */,
+				A94E7BC51D3A90A0001CB861 /* AddCardScanViewController.m in Sources */,
+				A94E7BC91D3A964D001CB861 /* AddCardView.m in Sources */,
+				A94E7B851D38CE2E001CB861 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A94E7B8C1D38CE2E001CB861 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A94E7B8D1D38CE2E001CB861 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A94E7B941D38CE2E001CB861 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A94E7B951D38CE2E001CB861 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A94E7B981D38CE2E001CB861 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A94E7B991D38CE2E001CB861 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A94E7B9B1D38CE2E001CB861 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA9F9C4FFF05701F6B79FAAF /* Pods-CardPackage.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/CardPackage/Tools/PrefixHeader.pch";
+				INFOPLIST_FILE = CardPackage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.CardPackage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A94E7B9C1D38CE2E001CB861 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9659EC46720DD97CACD7520D /* Pods-CardPackage.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/CardPackage/Tools/PrefixHeader.pch";
+				INFOPLIST_FILE = CardPackage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.CardPackage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A94E7B7B1D38CE2D001CB861 /* Build configuration list for PBXProject "CardPackage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A94E7B981D38CE2E001CB861 /* Debug */,
+				A94E7B991D38CE2E001CB861 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A94E7B9A1D38CE2E001CB861 /* Build configuration list for PBXNativeTarget "CardPackage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A94E7B9B1D38CE2E001CB861 /* Debug */,
+				A94E7B9C1D38CE2E001CB861 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A94E7B8F1D38CE2E001CB861 /* CardPackage.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A94E7B901D38CE2E001CB861 /* CardPackage.xcdatamodel */,
+			);
+			currentVersion = A94E7B901D38CE2E001CB861 /* CardPackage.xcdatamodel */;
+			path = CardPackage.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A94E7B781D38CE2D001CB861 /* Project object */;
+}
