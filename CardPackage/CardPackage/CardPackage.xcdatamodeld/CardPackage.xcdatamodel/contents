@@ -3,10 +3,11 @@
     <entity name="Card" representedClassName="Card" syncable="YES">
         <attribute name="cardNum" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="cardType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="codeType" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="shopAddress" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="shopName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Card" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="Card" positionX="-63" positionY="-18" width="128" height="120"/>
     </elements>
 </model>

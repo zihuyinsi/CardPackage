@@ -2,7 +2,7 @@
 //  Card.h
 //  CardPackage
 //
-//  Created by lv on 16/7/16.
+//  Created by tsou on 16/7/18.
 //  Copyright © 2016年 lv. All rights reserved.
 //
 

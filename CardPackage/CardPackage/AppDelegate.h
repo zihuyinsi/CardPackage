@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "Card.h"
 
 @class ViewController;
 
@@ -53,7 +54,7 @@
  *  @param cardNum  卡号
  *  @param cardInfo 卡信息
  */
-- (void)updateData:(NSString*)cardNum withCardInfo: (NSMutableDictionary *)cardInfo;
+- (void)updateData:(NSString*)cardNum withCardInfo: (NSDictionary *)cardInfo;
 
 
 @end

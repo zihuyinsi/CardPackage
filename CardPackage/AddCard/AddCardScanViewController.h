@@ -11,7 +11,7 @@
 
 @interface AddCardScanViewController : UIViewController<ZBarReaderViewDelegate>
 
-@property (nonatomic, copy) void (^isScanOk)(NSString *scanInfo);
+@property (nonatomic, copy) void (^isScanOk)(NSMutableDictionary *scanInfo);
 @property (nonatomic, copy) void (^isCannel)();
 
 @end

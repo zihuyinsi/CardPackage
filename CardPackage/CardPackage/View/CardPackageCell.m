@@ -44,14 +44,15 @@
         _cardNum = [[UILabel alloc] init];
         [_cardNum setBackgroundColor: [UIColor clearColor]];
         [_cardNum setTextColor: Card_Num_Color];
-        [_cardNum setFont: [UIFont systemFontOfSize: 15.f]];
+        CGFloat numFontSize = 17.f * iPhoneScale;
+        [_cardNum setFont: [UIFont systemFontOfSize: numFontSize]];
         [_bgView addSubview: _cardNum];
         [_cardNum mas_makeConstraints:^(MASConstraintMaker *make)
          {
-            make.top.mas_equalTo(_bgView.mas_top).with.offset(10);
+            make.top.mas_equalTo(_bgView.mas_top).with.offset(0);
             make.left.mas_equalTo(_bgView.mas_left).with.offset(10);
             make.right.mas_equalTo(_bgView.mas_right).with.offset(-10);
-            make.height.mas_equalTo(35);
+            make.height.mas_equalTo(35*iPhoneScale);
         }];
         
         //卡名
@@ -63,23 +64,24 @@
         [_bgView addSubview: _cardName];
         [_cardName mas_makeConstraints:^(MASConstraintMaker *make)
          {
-            make.top.mas_equalTo(_cardNum.mas_top).with.offset(0);
+            make.top.mas_equalTo(_cardNum.mas_bottom).with.offset(0);
             make.left.mas_equalTo(_bgView.mas_left).with.offset(10);
             make.right.mas_equalTo(_bgView.mas_right).with.offset(-10);
-            make.height.mas_equalTo(30);
+            make.height.mas_equalTo(20*iPhoneScale);
         }];
         
         //卡地址
         _cardAddress = [[UILabel alloc] init];
         [_cardAddress setBackgroundColor: [UIColor clearColor]];
-        [_cardAddress setFont: [UIFont boldSystemFontOfSize: 13.f]];
+        CGFloat addressFontSize = 13.f * iPhoneScale;
+        [_cardAddress setFont: [UIFont boldSystemFontOfSize: addressFontSize]];
         [_cardAddress setTextColor: Card_Address_Color];
         [_bgView addSubview: _cardAddress];
         [_cardAddress mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(_cardName.mas_bottom).with.offset(0);
             make.left.mas_equalTo(_bgView.mas_left).with.offset(10);
             make.right.mas_equalTo(_bgView.mas_right).with.offset(-10);
-            make.height.mas_equalTo(30);
+            make.height.mas_equalTo(20*iPhoneScale);
         }];
     }
     

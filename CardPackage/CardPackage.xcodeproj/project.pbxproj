@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6361A7501D3CFC6800D04FA6 /* CardDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6361A74F1D3CFC6800D04FA6 /* CardDetailViewController.m */; };
+		6361A7551D3D010100D04FA6 /* Card+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6361A7521D3D010100D04FA6 /* Card+CoreDataProperties.m */; };
+		6361A7561D3D010100D04FA6 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 6361A7541D3D010100D04FA6 /* Card.m */; };
 		6F9E4E14A63FD9ED519AD15E /* libPods-CardPackage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BB82229D809EC3B763A08E /* libPods-CardPackage.a */; };
 		A94E7B851D38CE2E001CB861 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A94E7B841D38CE2E001CB861 /* main.m */; };
 		A94E7B881D38CE2E001CB861 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A94E7B871D38CE2E001CB861 /* AppDelegate.m */; };
@@ -18,14 +21,18 @@
 		A94E7BAE1D38D9B6001CB861 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = A94E7BAD1D38D9B6001CB861 /* UIColor+Hex.m */; };
 		A94E7BB41D38E010001CB861 /* CardPackageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A94E7BB31D38E010001CB861 /* CardPackageCell.m */; };
 		A94E7BB71D38E7E8001CB861 /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = A94E7BB61D38E7E8001CB861 /* Tools.m */; };
-		A94E7BBC1D3A8457001CB861 /* Card+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = A94E7BB91D3A8457001CB861 /* Card+CoreDataProperties.m */; };
-		A94E7BBD1D3A8457001CB861 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = A94E7BBB1D3A8457001CB861 /* Card.m */; };
 		A94E7BC21D3A873A001CB861 /* AddCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A94E7BC11D3A873A001CB861 /* AddCardViewController.m */; };
 		A94E7BC51D3A90A0001CB861 /* AddCardScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A94E7BC41D3A90A0001CB861 /* AddCardScanViewController.m */; };
 		A94E7BC91D3A964D001CB861 /* AddCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = A94E7BC81D3A964D001CB861 /* AddCardView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6361A74E1D3CFC6800D04FA6 /* CardDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardDetailViewController.h; sourceTree = "<group>"; };
+		6361A74F1D3CFC6800D04FA6 /* CardDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardDetailViewController.m; sourceTree = "<group>"; };
+		6361A7511D3D010100D04FA6 /* Card+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Card+CoreDataProperties.h"; sourceTree = "<group>"; };
+		6361A7521D3D010100D04FA6 /* Card+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Card+CoreDataProperties.m"; sourceTree = "<group>"; };
+		6361A7531D3D010100D04FA6 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		6361A7541D3D010100D04FA6 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		9659EC46720DD97CACD7520D /* Pods-CardPackage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardPackage.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardPackage/Pods-CardPackage.release.xcconfig"; sourceTree = "<group>"; };
 		A94E7B801D38CE2E001CB861 /* CardPackage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardPackage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A94E7B841D38CE2E001CB861 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -46,10 +53,6 @@
 		A94E7BB31D38E010001CB861 /* CardPackageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardPackageCell.m; sourceTree = "<group>"; };
 		A94E7BB51D38E7E8001CB861 /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
 		A94E7BB61D38E7E8001CB861 /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
-		A94E7BB81D3A8457001CB861 /* Card+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Card+CoreDataProperties.h"; sourceTree = "<group>"; };
-		A94E7BB91D3A8457001CB861 /* Card+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Card+CoreDataProperties.m"; sourceTree = "<group>"; };
-		A94E7BBA1D3A8457001CB861 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
-		A94E7BBB1D3A8457001CB861 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		A94E7BC01D3A873A001CB861 /* AddCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCardViewController.h; sourceTree = "<group>"; };
 		A94E7BC11D3A873A001CB861 /* AddCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCardViewController.m; sourceTree = "<group>"; };
 		A94E7BC31D3A90A0001CB861 /* AddCardScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCardScanViewController.h; sourceTree = "<group>"; };
@@ -80,6 +83,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6361A74D1D3CFC5C00D04FA6 /* CardDetail */ = {
+			isa = PBXGroup;
+			children = (
+				6361A74E1D3CFC6800D04FA6 /* CardDetailViewController.h */,
+				6361A74F1D3CFC6800D04FA6 /* CardDetailViewController.m */,
+			);
+			path = CardDetail;
+			sourceTree = "<group>";
+		};
 		A0D2991D06F667F7AE4588D9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,8 +104,8 @@
 		A94E7B771D38CE2D001CB861 = {
 			isa = PBXGroup;
 			children = (
+				6361A74D1D3CFC5C00D04FA6 /* CardDetail */,
 				A94E7BBE1D3A870A001CB861 /* AddCard */,
-				A94E7BBF1D3A870A001CB861 /* CardDetail */,
 				A94E7B821D38CE2E001CB861 /* CardPackage */,
 				A94E7B811D38CE2E001CB861 /* Products */,
 				A0D2991D06F667F7AE4588D9 /* Pods */,
@@ -140,10 +152,10 @@
 		A94E7BA31D38D471001CB861 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				A94E7BB81D3A8457001CB861 /* Card+CoreDataProperties.h */,
-				A94E7BB91D3A8457001CB861 /* Card+CoreDataProperties.m */,
-				A94E7BBA1D3A8457001CB861 /* Card.h */,
-				A94E7BBB1D3A8457001CB861 /* Card.m */,
+				6361A7511D3D010100D04FA6 /* Card+CoreDataProperties.h */,
+				6361A7521D3D010100D04FA6 /* Card+CoreDataProperties.m */,
+				6361A7531D3D010100D04FA6 /* Card.h */,
+				6361A7541D3D010100D04FA6 /* Card.m */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -190,13 +202,6 @@
 			path = AddCard;
 			sourceTree = "<group>";
 		};
-		A94E7BBF1D3A870A001CB861 /* CardDetail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CardDetail;
-			sourceTree = "<group>";
-		};
 		A94E7BC61D3A963B001CB861 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,12 +218,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A94E7B9A1D38CE2E001CB861 /* Build configuration list for PBXNativeTarget "CardPackage" */;
 			buildPhases = (
-				5B0937C994758ECB6E07F1F5 /* 📦 Check Pods Manifest.lock */,
+				5B0937C994758ECB6E07F1F5 /* [CP] Check Pods Manifest.lock */,
 				A94E7B7C1D38CE2E001CB861 /* Sources */,
 				A94E7B7D1D38CE2E001CB861 /* Frameworks */,
 				A94E7B7E1D38CE2E001CB861 /* Resources */,
-				2904A8F605EAAA4C77C0AB28 /* 📦 Embed Pods Frameworks */,
-				628384230F30849C9C412053 /* 📦 Copy Pods Resources */,
+				2904A8F605EAAA4C77C0AB28 /* [CP] Embed Pods Frameworks */,
+				628384230F30849C9C412053 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -275,14 +280,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2904A8F605EAAA4C77C0AB28 /* 📦 Embed Pods Frameworks */ = {
+		2904A8F605EAAA4C77C0AB28 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,14 +295,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CardPackage/Pods-CardPackage-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5B0937C994758ECB6E07F1F5 /* 📦 Check Pods Manifest.lock */ = {
+		5B0937C994758ECB6E07F1F5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,14 +310,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		628384230F30849C9C412053 /* 📦 Copy Pods Resources */ = {
+		628384230F30849C9C412053 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,17 +332,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6361A7561D3D010100D04FA6 /* Card.m in Sources */,
 				A94E7BB71D38E7E8001CB861 /* Tools.m in Sources */,
-				A94E7BBC1D3A8457001CB861 /* Card+CoreDataProperties.m in Sources */,
+				6361A7551D3D010100D04FA6 /* Card+CoreDataProperties.m in Sources */,
 				A94E7B8B1D38CE2E001CB861 /* ViewController.m in Sources */,
 				A94E7BAE1D38D9B6001CB861 /* UIColor+Hex.m in Sources */,
 				A94E7BB41D38E010001CB861 /* CardPackageCell.m in Sources */,
-				A94E7BBD1D3A8457001CB861 /* Card.m in Sources */,
 				A94E7B881D38CE2E001CB861 /* AppDelegate.m in Sources */,
 				A94E7B911D38CE2E001CB861 /* CardPackage.xcdatamodeld in Sources */,
 				A94E7BC21D3A873A001CB861 /* AddCardViewController.m in Sources */,
 				A94E7BC51D3A90A0001CB861 /* AddCardScanViewController.m in Sources */,
 				A94E7BC91D3A964D001CB861 /* AddCardView.m in Sources */,
+				6361A7501D3CFC6800D04FA6 /* CardDetailViewController.m in Sources */,
 				A94E7B851D38CE2E001CB861 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

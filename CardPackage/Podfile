@@ -6,7 +6,13 @@ target 'CardPackage' do
 #QR and barcode scan library.
 pod 'ZBarSDK'
 
+#1D and 2D barcodes scanner and generators for iOS 7 with delightful controls.
+pod 'RSBarcodes'
+
 #Harness the power of Auto Layout NSLayoutConstraints with a simplified, chainable and expressive syntax.
 pod 'Masonry'
+
+#Codeless drop-in universal library allows to prevent issues of keyboard sliding up and cover UITextField/UITextView.
+pod 'IQKeyboardManager'
 
 end

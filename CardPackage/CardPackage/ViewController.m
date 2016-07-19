@@ -13,6 +13,8 @@
 //添加卡
 #import "AddCardViewController.h"
 
+#import "CardDetailViewController.h"
+
 @interface ViewController ()
 {
     UITableView *cardTableView;
@@ -30,6 +32,8 @@
     [self.navigationController.navigationBar setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys: [UIColor colorWithHex: @"363636"], NSForegroundColorAttributeName, [UIFont systemFontOfSize: 17.f], NSFontAttributeName, nil]];
     [self.view setBackgroundColor: View_BgColor];
     self.title = @"卡包";
+    
+    [self gainAllCardInfo];
 }
 
 - (void)viewDidLoad
@@ -47,13 +51,16 @@
     UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithCustomView: rightBtn];
     self.navigationItem.rightBarButtonItem = right;
     
+    cardArray = [[NSMutableArray alloc] init];
+    
     cardTableView = [[UITableView alloc] initWithFrame: CGRectMake( 0, 64, iPhoneWidth, iPhoneHeight-154)];
     cardTableView.delegate = self;
     cardTableView.dataSource = self;
     cardTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.automaticallyAdjustsScrollViewInsets = NO;
     [cardTableView setBackgroundColor: [UIColor clearColor]];
-    [cardTableView registerNib:[UINib nibWithNibName:@"DynamicCell" bundle:nil] forCellReuseIdentifier:@"DynamicCell"];
+    [cardTableView registerClass: [CardPackageCell class] forCellReuseIdentifier:@"CardPackageCell"];
+    [self.view addSubview: cardTableView];
 }
 
 #pragma mark - UITableViewData / UITableViewDataSource
@@ -69,7 +76,7 @@
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 100;
+    return 95*iPhoneScale;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -84,7 +91,17 @@
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    CardDetailViewController *cardDetailVC = [[CardDetailViewController alloc] init];
+    cardDetailVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController: cardDetailVC animated: YES];
+}
+
+#pragma mark - 所有卡数据
+- (void) gainAllCardInfo
+{
+    [cardArray removeAllObjects];
+    cardArray = [ApplicationDelegate selectData: @"**"];
+    [cardTableView reloadData];
 }
 
 #pragma mark - rightBtnClick/添加卡

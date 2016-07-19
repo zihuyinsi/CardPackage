@@ -137,19 +137,98 @@
 //插入数据
 - (void)insertCoreData:(NSMutableArray*)dataArray
 {
+    NSManagedObjectContext *context = [self managedObjectContext];
+    for (NSDictionary *info in dataArray)
+    {
+        Card *cardInfo = [NSEntityDescription insertNewObjectForEntityForName: @"Card" inManagedObjectContext:context];
+        cardInfo.cardNum = info[@"cardNum"];
+        cardInfo.shopName = info[@"shopName"];
+        cardInfo.shopAddress = info[@"shopAddress"];
+        NSError *error;
+        if(![context save:&error])
+        {
+            NSLog(@"不能保存：%@",[error localizedDescription]);
+        }
+    }
 }
 //查询
 - (NSMutableArray*)selectData:(NSString *)cardNum
 {
-    return nil;
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName: @"Card" inManagedObjectContext:context];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    [fetchRequest setEntity:entity];
+    if (![cardNum isEqualToString: @"**"])
+    {
+        NSPredicate *pred = [NSPredicate predicateWithFormat:@"(cardNum = %@)",cardNum];     //创建一个“查询”，寻找cardNum=cardNum的行
+        [fetchRequest setPredicate:pred];     //赋予“命令”具体的内容，即实现一个“查询”
+    }
+    
+    NSError *error;
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    NSMutableArray *resultArray = [NSMutableArray array];
+    
+    for (Card *info in fetchedObjects)
+    {
+        [resultArray addObject: info];
+    }
+    return resultArray;
 }
 //删除
 - (void)deleteData: (NSString *)cardNum
 {
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName: @"Card" inManagedObjectContext:context];
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"(cardNum = %@)",cardNum];     //创建一个“查询”，寻找cardNum=cardNum的行
+
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setIncludesPropertyValues:NO];
+    [request setEntity:entity];
+    [request setPredicate:pred];     //赋予“命令”具体的内容，即实现一个“查询”
+
+    NSError *error = nil;
+    NSArray *datas = [context executeFetchRequest:request error:&error];
+    if (!error && datas && [datas count])
+    {
+        for (NSManagedObject *obj in datas)
+        {
+            [context deleteObject:obj];
+        }
+        if (![context save:&error])
+        {
+            NSLog(@"error:%@",error);
+        }
+    }
 }
 //修改
-- (void)updateData:(NSString*)cardNum withCardInfo: (NSMutableDictionary *)cardInfo
+- (void)updateData:(NSString*)cardNum withCardInfo: (NSDictionary *)cardInfo
 {
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName: @"Card" inManagedObjectContext:context];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat: @"(cardNum = %@)",cardNum];
+    //首先你需要建立一个request
+    NSFetchRequest * request = [[NSFetchRequest alloc] init];
+    [request setEntity: entity];
+    [request setPredicate:predicate];//这里相当于sqlite中的查询条件，具体格式参考苹果文档
+    
+    //https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Predicates/Articles/pCreating.html
+    NSError *error = nil;
+    NSArray *result = [context executeFetchRequest:request error:&error];//这里获取到的是一个数组，你需要取出你要更新的那个obj
+    for (Card *info in result)
+    {
+        info.cardNum = cardInfo[@"cardNum"];
+        info.shopName = cardInfo[@"shopName"];
+        info.shopAddress = cardInfo[@"shopAddress"];
+    }
+    
+    //保存
+    if ([context save:&error])
+    {
+        //更新成功
+        NSLog(@"更新成功");
+    }
 }
 
 @end

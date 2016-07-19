@@ -10,6 +10,8 @@
 #import "AddCardScanViewController.h"
 #import "AddCardView.h"
 
+#import "Card.h"
+
 @interface AddCardViewController ()
 {
     AddCardView *addCardView;
@@ -52,16 +54,54 @@
     addCardView = [[AddCardView alloc] initWithFrame: CGRectMake( 0, 80, iPhoneWidth, 280*iPhoneScale)];
     [addCardView setBackgroundColor: [UIColor whiteColor]];
     [self.view addSubview: addCardView];
+    
+    [addCardView.confirmBtn addTarget: self action: @selector(confirmBtnClick) forControlEvents: UIControlEventTouchUpInside];
 }
 
+#pragma mark - 保存
+- (void) confirmBtnClick
+{
+    NSLog(@"保存");
+    [self.view endEditing: YES];
+    
+    NSString *cardNumStr = addCardView.numField.text;
+    NSString *cardNameStr = addCardView.nameField.text;
+    NSString *cardAddrStr = addCardView.addressField.text;
+    NSLog(@"cardNumStr = %@, cardNameStr = %@, cardAddrStr = %@", cardNumStr, cardNameStr, cardAddrStr);
+    
+    if ([cardNumStr isEqualToString: @""] || cardNumStr == nil || [cardNumStr isEqual: [NSNull null]] || [[cardNumStr stringByReplacingOccurrencesOfString: @" " withString: @""] isEqualToString: @""])
+    {
+        NSLog(@"请输入卡号");
+        return;
+    }
+    
+    NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+    tempArray = [ApplicationDelegate selectData: cardNumStr];
+    NSLog(@"tempArray = %@", tempArray);
+    if ([tempArray count] > 0)
+    {
+        NSDictionary *cardInfo = [NSDictionary dictionaryWithObjectsAndKeys: cardNumStr, @"cardNum", cardNameStr, @"shopName", cardAddrStr, @"shopAddress", nil];
+        //修改数据库
+        [ApplicationDelegate updateData: cardNumStr withCardInfo: cardInfo];
+    }
+    else
+    {
+        NSDictionary *cardInfo = [NSDictionary dictionaryWithObjectsAndKeys: cardNumStr, @"cardNum", cardNameStr, @"shopName", cardAddrStr, @"shopAddress", nil];
+        NSMutableArray *tempArr = [NSMutableArray arrayWithObject: cardInfo];
+        [ApplicationDelegate insertCoreData: tempArr];
+    }
+}
+
+#pragma mark - 扫描添加
 - (void) rightBtnClick
 {
     AddCardScanViewController *addCardSacnVC = [[AddCardScanViewController alloc] init];
     addCardSacnVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController: addCardSacnVC animated: YES];
-    addCardSacnVC.isScanOk = ^(NSString *scanInfo)
+    addCardSacnVC.isScanOk = ^(NSMutableDictionary *scanInfo)
     {
-    
+        addCardView.numField.text = scanInfo[@"data"];
+        NSLog(@"%@", scanInfo[@"type"]);
     };
     addCardSacnVC.isCannel = ^(){};
 }

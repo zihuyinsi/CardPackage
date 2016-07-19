@@ -54,6 +54,7 @@
     for(ZBarSymbol *sym in syms)
     {
         NSLog(@"sym.data = %@", sym.data);
+//        NSLog(@"sym.type = %@", sym.type);
         [readerView stop];
 
         UIAlertController *alert = [UIAlertController alertControllerWithTitle: @"扫描结果" message: sym.data preferredStyle: UIAlertControllerStyleAlert];
@@ -62,7 +63,9 @@
 
         }];
         UIAlertAction *confirmAction = [UIAlertAction actionWithTitle: @"确认" style: UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            NSString *scanInfo = sym.data;
+            NSString *dataStr = sym.data;
+            NSNumber *type = [NSNumber numberWithInteger: sym.type];
+            NSMutableDictionary *scanInfo = [[NSMutableDictionary alloc] initWithObjectsAndKeys: dataStr, @"data", type, @"type", nil];
             self.isScanOk(scanInfo);
             [self.navigationController popViewControllerAnimated: YES];
         }];
