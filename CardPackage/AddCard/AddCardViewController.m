@@ -69,7 +69,10 @@
     NSString *cardAddrStr = addCardView.addressField.text;
     NSLog(@"cardNumStr = %@, cardNameStr = %@, cardAddrStr = %@", cardNumStr, cardNameStr, cardAddrStr);
     
-    if ([cardNumStr isEqualToString: @""] || cardNumStr == nil || [cardNumStr isEqual: [NSNull null]] || [[cardNumStr stringByReplacingOccurrencesOfString: @" " withString: @""] isEqualToString: @""])
+    if ([cardNumStr isEqualToString: @""] ||
+        cardNumStr == nil ||
+        [cardNumStr isEqual: [NSNull null]] ||
+        [[cardNumStr stringByReplacingOccurrencesOfString: @" " withString: @""] isEqualToString: @""])
     {
         NSLog(@"请输入卡号");
         return;
